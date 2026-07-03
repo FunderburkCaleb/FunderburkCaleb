@@ -1,0 +1,57 @@
+# config/agents.yml — single source of truth for the Agent Registry.
+# Edit this file to add/remove/reorder flagship repos; the nightly build does the rest.
+
+meta:
+  owner: "FunderburkCaleb"
+  site: "https://www.calebfunderburk.com"
+  timezone: "America/New_York"
+  card_theme_pair: true          # always emit -dark and -light variants
+
+agents:
+  - id: copilot-studio-cookbook   # must match repo name exactly
+    order: 1                      # grid position; 1 = anchor slot, top-left
+    tagline: "Adaptive Cards + Power Fx patterns that aren't documented anywhere else"
+    domain: copilot-studio        # enum: copilot-studio | mcp | foundry | cowork | architecture | field-notes
+    status: auto                  # auto = derive from repo activity; or override: active | building | planned
+    show_stats: true              # stars/forks line on card
+    featured: true                # featured card renders at 2-col span (anchor treatment)
+    start_here: "start here →"    # only honored on the featured card
+
+  - id: mcp-agent-samples
+    order: 2
+    tagline: "Dataverse MCP + Azure Function proxy reference implementations"
+    domain: mcp
+    status: auto
+    show_stats: true
+
+  - id: agent-architectures
+    order: 3
+    tagline: "Console-styled reference diagrams for orchestrator / child-agent systems"
+    domain: architecture
+    status: building
+    show_stats: true
+
+  - id: cowork-playbooks
+    order: 4
+    tagline: "Multi-agent collaboration patterns for M365 Copilot + agent hand-off"
+    domain: cowork
+    status: building
+    show_stats: true
+
+  - id: foundry-samples
+    order: 5
+    tagline: "Azure AI Foundry agent patterns"
+    domain: foundry
+    status: planned               # renders ○ PLANNED card, link suppressed until repo exists
+    show_stats: false
+
+  - id: field-notes
+    order: 6
+    tagline: "Short workaround writeups — current product behavior, date-stamped"
+    domain: field-notes
+    status: planned
+    show_stats: false
+
+rules:
+  active_window_days: 30          # pushed within N days → ● ACTIVE
+  promote_on_first_release: true  # P1 feature flag: BUILDING → ACTIVE on first release tag

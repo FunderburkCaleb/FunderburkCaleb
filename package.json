@@ -1,0 +1,27 @@
+{
+  "name": "agent-console-readme",
+  "version": "1.0.0",
+  "description": "Self-updating 'Agent Orchestrator Console' GitHub profile README generator.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Caleb Funderburk <https://www.calebfunderburk.com>",
+  "scripts": {
+    "build:cards": "tsx scripts/build-cards.ts",
+    "build:telemetry": "tsx scripts/build-telemetry.ts",
+    "assemble": "tsx scripts/assemble-readme.ts",
+    "build": "npm run build:cards && npm run build:telemetry && npm run assemble",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@octokit/graphql": "^8.1.1",
+    "yaml": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

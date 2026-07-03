@@ -1,0 +1,56 @@
+[
+  {
+    "id": "copilot-studio-cookbook",
+    "order": 1,
+    "domain": "copilot-studio",
+    "featured": true,
+    "status": "planned",
+    "linked": false,
+    "url": null
+  },
+  {
+    "id": "mcp-agent-samples",
+    "order": 2,
+    "domain": "mcp",
+    "featured": false,
+    "status": "planned",
+    "linked": false,
+    "url": null
+  },
+  {
+    "id": "agent-architectures",
+    "order": 3,
+    "domain": "architecture",
+    "featured": false,
+    "status": "building",
+    "linked": false,
+    "url": null
+  },
+  {
+    "id": "cowork-playbooks",
+    "order": 4,
+    "domain": "cowork",
+    "featured": false,
+    "status": "building",
+    "linked": false,
+    "url": null
+  },
+  {
+    "id": "foundry-samples",
+    "order": 5,
+    "domain": "foundry",
+    "featured": false,
+    "status": "planned",
+    "linked": false,
+    "url": null
+  },
+  {
+    "id": "field-notes",
+    "order": 6,
+    "domain": "field-notes",
+    "featured": false,
+    "status": "planned",
+    "linked": false,
+    "url": null
+  }
+]
